@@ -17,7 +17,6 @@ bool XRInput::GetButton(ButtonType type, XRNode xrnode) {
     Method<InputDevice> GetDeviceAtXRNode = InputDevicesClass.GetMethod("GetDeviceAtXRNode", 1);
 
     auto device = GetDeviceAtXRNode(xrnode);
-    //BNM_LOG_INFO("Device ID: %llu (isLeft: %d)\n", device.deviceId, xrnode);  // Check the device ID and ensure the correct controller is returned
 
     switch (type) {
         case ButtonType::grip:
